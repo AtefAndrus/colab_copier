@@ -13,7 +13,7 @@ This browser extension allows you to easily copy code snippets from Google Colab
 1. Clone the repository:
 
   ```bash
-  git clone https://github.com/yourusername/colab_copy_extension.git
+  git clone https://github.com/AtefAndrus/colab_copier
   ```
 
 2. Open your browser and go to the extensions page.

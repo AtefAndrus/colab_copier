@@ -8,6 +8,14 @@ function extractCodeCells() {
   return allCode;
 }
 
+// メッセージリスナー
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "extractCode") {
+    let code = extractCodeCells();
+    sendResponse({ code: code });
+  }
+});
+
 // コードをクリップボードにコピー
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => {
